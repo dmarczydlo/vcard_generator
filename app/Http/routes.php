@@ -11,6 +11,8 @@
 |
 */
 
-$app->get('/', function () {
-    return 'Hello World';
-});
+$app->get('/', 'AppController@index');
+
+
+$app->get('login', 'UserController@showLogin');
+$app->post('login', 'UserController@doLogin');

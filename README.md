@@ -1,8 +1,18 @@
-## Samle vCard Generator
+## Sample vCard Page Generator
 
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-In progress....
+### Installation
+
+**Clone repository**
+```git
+git clone github.com/dmarczydlo/vcard_generator.git
+```
+
+**After run script**
+```git
+sh scripts/install.sh
+```
 
 ### License
 
