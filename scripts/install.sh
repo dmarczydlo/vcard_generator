@@ -4,6 +4,7 @@ DIR_BIN="$( cd "$( dirname "$0" )" && pwd )"
 cd $DIR_BIN
 cd ..
 echo "+++++++++++++++++=Create DB=+++++++++++++++++"
+mkdir db
 touch ./db/db.sqlite
 cp .env-template .env
 echo "+++++++++++++++++=generate APP_KEY=+++++++++++++++++"
