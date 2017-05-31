@@ -16,5 +16,16 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
             'password' => app('hash')->make('secret'),
         ]);
+
+
+        DB::table('person')->insert([
+           'location' => 'Rzeszów',
+            'phone' => '12341234',
+            'email' => 'vcard@example.com',
+            'nick' => 'vcard',
+            'surname' => 'example',
+            'firstname' => 'vcard'
+        ]);
+
     }
 }

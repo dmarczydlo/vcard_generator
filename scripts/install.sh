@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+OS="`uname`"
 DIR_BIN="$( cd "$( dirname "$0" )" && pwd )"
 cd $DIR_BIN
 cd ..
@@ -13,9 +13,18 @@ echo "Your APP_KEY IS $KEY"
 sed -i "/APP_KEY=/c APP_KEY=$KEY" .env
 sed -i "/DB_DATABASE=/c DB_DATABASE=./db/db.sqlite" .env
 echo "+++++++++++++++++=install dependencies=+++++++++++++++++"
-composer install
-echo "+++++++++++++++++=run migrations=+++++++++++++++++"
-artisan migrate
-echo "+++++++++++++++++=add test user=+++++++++++++++++"
-artisan db:seed
+if [ "{$OS}" == "Linux" ]; then
+    composer install
+    echo "+++++++++++++++++=run migrations=+++++++++++++++++"
+    artisan migrate
+    echo "+++++++++++++++++=add test user=+++++++++++++++++"
+    artisan db:seed
+else
+    composer install
+    echo "+++++++++++++++++=run migrations=+++++++++++++++++"
+    php artisan migrate
+    echo "+++++++++++++++++=add test user=+++++++++++++++++"
+    php artisan db:seed
+fi
+npm install
 echo "+++++++++++++++++=installation completed=+++++++++++++++++"

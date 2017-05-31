@@ -1,0 +1,25 @@
+{
+  "name": "vcard",
+  "version": "1.0.0",
+  "description": "vcard generator for page",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmarczydlo/vcard_generator.git"
+  },
+  "author": "daniel marczydlo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmarczydlo/vcard_generator/issues"
+  },
+  "homepage": "https://github.com/dmarczydlo/vcard_generator#readme",
+  "dependencies": {
+    "@angular/material": "^2.0.0-beta.6"
+  }
+}
